@@ -1,0 +1,36 @@
+<template name="SubmitWorkFlow">
+   <div class="container">
+      <div class="well">
+         <p>After successfully submitting NOE request you will be redirected to workflows in progress view.</p>
+      </div>
+      <form class="form-horizontal">
+         <fieldset>
+            <legend>Submit NOE Workflow</legend>
+            <div class="form-group" id="parentInputNoeId">
+               <label for="inputNoeId" class="col-lg-3 control-label">NOE Id</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputNoeId" name="inputNoeId" placeholder="NOE Id" required autofocus>
+               </div>
+            </div>
+            <div class="form-group" id="parentInputDescription">
+               <label for="inputDescription" class="col-lg-3 control-label">Description</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputDescription" name="inputDescription" placeholder="Description" required>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="col-lg-7 col-lg-offset-5">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+            </div>
+         </fieldset>
+      </form>
+      <div id="noeErrors" class="alert alert-dismissable alert-danger noDisplay">
+         <!-- <button type="button" class="close" data-dismiss="alert">&#215;</button> -->
+         <h4>Error:</h4>
+         <div id="noeErrorsMsg"></div>
+      </div>
+
+   </div>
+</template>

@@ -1,0 +1,25 @@
+<template name="WorkFlowsInProgress">
+   <table class="table table-striped table-hover">
+      <thead>
+         <tr>
+            <th class="col-lg-1">Id</th>
+            <th class="col-lg-1">NOE Id</th>
+            <th class="col-lg-1">Saga Id</th>
+            <th class="col-lg-1">Description</th>
+            <th class="col-lg-1">Timestamp</th>
+            <th class="col-lg-1">Needs Approval</th>
+            <th class="col-lg-1">Approved</th>
+            <th class="col-lg-1">Needs Negotiation</th>
+            <th class="col-lg-1">Negotiated</th>
+            <th class="col-lg-1">Needs Offering</th>
+            <th class="col-lg-1">Offered</th>
+            <th class="col-lg-1">Status</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{ #each NoeInProgress }}
+         {{ > Row }}
+         {{ /each }}
+      </tbody>
+   </table>
+</template>

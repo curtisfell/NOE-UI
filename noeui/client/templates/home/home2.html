@@ -1,0 +1,37 @@
+<template name="Home">
+    <div class="container">
+        <h1>Welcome to NOE Workflow Management Portal</h1>
+<!--
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Customer Support</h3>
+            </div>
+            <div class="panel-body">
+                Need to create a Product Support or Warranty Request?<br />
+                Please visit our <a href="http://portal2.myzsus.com/weberzodiac.nsf/customerservicehome">Product Support Portal.</a>
+            </div>
+        </div>
+-->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Start or Resubmit an NOE Workflow</h3>
+            </div>
+            <div class="panel-body">
+                Need to submit a new package or resubmit an existing package for NOE workflow processing?<br />
+                You're in the right place, please start  <a href="{{pathFor 'SubmitWorkFlow'}}"><strong>here</strong></a>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Manage NOE Workflows</h3>
+            </div>
+            <div class="panel-body">
+                Need to view or manage NOE workflows in progress?<br />
+                Then click  <a href="{{pathFor 'WorkFlowsInProgress'}}"><strong>here</strong></a>
+            </div>
+        </div>
+
+        <p>If you have trouble accessing the NOE management portal please email <a href="mailto:myzsussupport.zsus@zodiacaerospace.com?Subject=MyZsus%20Support">NOE Support</a>.</p>
+    </div>
+</template>

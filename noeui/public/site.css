@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+}
+
+.footer-spacer {
+	margin-bottom: 50px;
+}
+
+.footer {
+	text-align: center;
+	width: 100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.navbar-default {
+	filter: none !important;
+}
+
+.navbar-inverse .navbar-inner{
+  filter:none !important;
+}
