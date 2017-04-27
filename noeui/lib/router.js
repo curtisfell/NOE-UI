@@ -10,7 +10,6 @@ Router.route('/', {
 		}
 });
 
-
 Router.route('/submit-workflow', {
    name: 'SubmitWorkFlow',
    action: function() {
@@ -32,3 +31,35 @@ Router.route('/workflows-in-progress', {
       this.render('WorkFlowsInProgress');
    }
 });
+
+Router.route('/noe-approval', {
+   name: 'NoeApproval',
+   data: function() {
+      return { 'noeid' : this.params.query.noeid, 'sagaid' : this.params.query.sagaid, 'flag' : this.params.query.flag }
+   },
+   action: function() {
+      this.render('NoeApproval');
+   }
+});
+
+Router.route('/noe-negotiation', {
+   name: 'NoeNegotiation',
+   data: function() {
+      return { 'noeid' : this.params.query.noeid, 'sagaid' : this.params.query.sagaid, 'flag' : this.params.query.flag }
+   },
+   action: function() {
+      this.render('NoeNegotiation');
+   }
+});
+
+Router.route('/noe-offering', {
+   name: 'NoeOffering',
+   data: function() {
+      return { 'noeid' : this.params.query.noeid, 'sagaid' : this.params.query.sagaid, 'flag' : this.params.query.flag }
+   },
+   action: function() {
+      this.render('NoeOffering');
+   }
+});
+
+

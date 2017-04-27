@@ -12,12 +12,12 @@ Template.SubmitWorkFlow.events({
          noeid: $(event.target).find('[id=inputNoeId]').val(),
          description: $(event.target).find('[id=inputDescription]').val(),
          timestamp: Date.now(),
-         needsapproval: 1,
-         approved: 0,
-         needsnegotiation: 1,
-         negotiated: 0,
-         needsoffering: 1,
-         offered: 0,
+         needsapproval: -1,
+         approved: -1,
+         needsnegotiation: -1,
+         negotiated: -1,
+         needsoffering: -1,
+         offered: -1,
          status: 0
       }
       console.log('noe data collected');
@@ -33,11 +33,6 @@ Template.SubmitWorkFlow.events({
          }
          if (result.noeCreated) {
             console.log('noe created');
-            /*
-            Session.set("id", result.userId);
-            Session.set("user", acct.username);
-            Session.set("email", acct.profile.email);
-            */
             Router.go('WorkFlowsInProgress');
          } else {
             $("#noeErrorsMsg").text(result.error);

@@ -1,0 +1,42 @@
+<template name="NoeOffering">
+   <div class="container">
+      <div class="well">
+         <p>After successfully submitting NOE offering request you will be redirected to workflows in progress view.</p>
+      </div>
+      <form class="form-horizontal">
+         <fieldset>
+            <legend>NOE Offering</legend>
+            <div class="form-group" id="parentInputNoeId">
+               <label for="inputNoeId" class="col-lg-3 control-label">NOE Id</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputNoeId" name="inputNoeId" value={{noeid}} required autofocus>
+               </div>
+            </div>
+            <div class="form-group" id="parentInputSagaId">
+               <label for="inputSagaId" class="col-lg-3 control-label">Saga Id</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputSagaId" name="inputSagaId" value={{sagaid}} required>
+               </div>
+            </div>
+            <div class="form-group" id="parentInputFlag">
+               <label for="inputFlag" class="col-lg-3 control-label">Approval Flag</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputFlag" name="inputFlag" value={{flag}} required>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="col-lg-7 col-lg-offset-5">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+            </div>
+         </fieldset>
+      </form>
+      <div id="noeErrors" class="alert alert-dismissable alert-danger noDisplay">
+         <!-- <button type="button" class="close" data-dismiss="alert">&#215;</button> -->
+         <h4>Error:</h4>
+         <div id="noeErrorsMsg"></div>
+      </div>
+
+   </div>
+</template>

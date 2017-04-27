@@ -1,0 +1,42 @@
+<template name="NoeApproval">
+   <div class="container">
+      <div class="well">
+         <p>After successfully submitting NOE approval request you will be redirected to workflows in progress view.</p>
+      </div>
+      <form class="form-horizontal">
+         <fieldset>
+            <legend>NOE Approval</legend>
+            <div class="form-group" id="parentInputAppNoeId">
+               <label for="inputAppNoeId" class="col-lg-3 control-label">NOE Id</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputAppNoeId" name="inputAppNoeId" value={{noeid}} required autofocus>
+               </div>
+            </div>
+            <div class="form-group" id="parentInputAppSagaId">
+               <label for="inputAppSagaId" class="col-lg-3 control-label">Saga Id</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputAppSagaId" name="inputAppSagaId" value={{sagaid}} required>
+               </div>
+            </div>
+            <div class="form-group" id="parentInputAppFlag">
+               <label for="inputAppFlag" class="col-lg-3 control-label">Approval Flag</label>
+               <div class="col-lg-6">
+                  <input type="text" class="form-control" id="inputAppFlag" name="inputAppFlag" value={{flag}} required>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="col-lg-7 col-lg-offset-5">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+            </div>
+         </fieldset>
+      </form>
+      <div id="noeAppErrors" class="alert alert-dismissable alert-danger noDisplay">
+         <!-- <button type="button" class="close" data-dismiss="alert">&#215;</button> -->
+         <h4>Error:</h4>
+         <div id="noeAppErrorsMsg"></div>
+      </div>
+
+   </div>
+</template>
